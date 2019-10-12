@@ -1,2 +1,2 @@
 # acronym-soup-blog
-This blog is created with an express.js router and Pug templating. 
+This blog will be in the format of a zine! I want to document my journey into development using Django.
