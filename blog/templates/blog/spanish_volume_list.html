@@ -1,0 +1,11 @@
+{% extends 'blog/spanish_layout.html' %}
+{% load static %}
+
+{% block content %}
+    {% for volume in volumes_sp %}
+        <img src="{% static 'images/'|add:volume.imagespanish_set.first.image_name|add:''' %}"  alt="{{ volume.imagespanish_set.first.image_description }}">
+        <h2><a href="{% url 'spanish_volume_detail' pk=volume.pk %}"> {{ volume.title }}</a></h2>
+        <h3>issued: {{ volume.published_date }}</h3> 
+    {% endfor %}
+{% endblock %}
+       

@@ -3,6 +3,6 @@
 __pycache__
 blogenv/
 db.sqlite3
-/static
+blog/static
 .DS_Store
 .vscode/

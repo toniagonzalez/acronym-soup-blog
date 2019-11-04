@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>Acronym Soup Blog</title>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>Acronym Soup Blog</h1>
+            <h3>by Tonia Gonzalez</h3>
+            <nav>
+                <ul>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="https://toniagonzalez.github.io/">Portfolio</a></li>
+                    <li><a href="/spanish/">Español</a></li>
+                </ul>    
+            </nav>    
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>    
+    </body>
+    <footer>
+        <h5>Tonia Gonzalez &copy;2019</h5>
+    </footer>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'blog/layout.html' %}
+{% load static %}
+
+{% block content %}
+    {% for volume in volumes %}
+        <img src="{% static 'images/'|add:volume.image_set.first.image_name|add:''' %}"  alt="{{ volume.image_set.first.image_description }}">
+        <h2><a href="{% url 'volume_detail' pk=volume.pk %}"> {{ volume.title }}</a></h2>
+        <h3>issued: {{ volume.published_date }}</h3> 
+    {% endfor %}
+{% endblock %}
+       

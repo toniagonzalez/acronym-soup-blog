@@ -1,0 +1,15 @@
+{% extends 'blog/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div>
+        {% for image in volume.image_set.all %}
+            <img src="{% static 'images/'|add:image.image_name|add:''' %}" alt="{{ image.image_description }}">
+        {% endfor %}
+        <h2> {{ volume.title }}</h2>
+        <h3>issued: {{ volume.published_date }}</h3>
+        {% for text in volume.text_set.all %}
+            <p> {{ text }} </p>
+        {% endfor %}
+    </div>
+{% endblock %}

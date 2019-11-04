@@ -1,0 +1,15 @@
+{% extends 'blog/spanish_layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div>
+        {% for image in volume_sp.imagespanish_set.all %}
+            <img src="{% static 'images/'|add:image.image_name|add:''' %}"  alt="{{ image.image_description }}">
+        {% endfor %}
+        <h2> {{ volume_sp.title }}</h2>
+        <h3>issued: {{ volume_sp.published_date }}</h3>
+        {% for text in volume_sp.textspanish_set.all %}
+            <p> {{ text }} </p>
+        {% endfor %}
+    </div>
+{% endblock %}

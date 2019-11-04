@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Blog de Sopa de Siglas</title>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>Blog de Sopa de Siglas</h1>
+            <h3>por Tonia Gonzalez</h3>
+            <nav>
+                <ul>
+                    <li><a href="/spanish/">Blog</a></li>
+                    <li><a href="/spanish-about">Quien Soy</a></li>
+                    <li><a href="https://toniagonzalez.github.io/">Portafolio</a></li>
+                    <li><a href="/">English</a></li>
+                </ul>    
+            </nav>    
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>    
+    </body>
+    <footer>
+        <h5>Tonia Gonzalez &copy;2019</h5>
+    </footer>
+</html>
